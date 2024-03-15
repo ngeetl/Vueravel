@@ -10,6 +10,6 @@ body {
     letter-spacing: 1.4px;
 }
 
-.txt-shadow {
-    text-shadow: 2px 2px 16px rgba(32, 30, 62, 0.919);
-}
+.space {
+    background: linear-gradient(160deg, #000000, #222123 50%, #321f45 75%, #370d5e 100%);
+} 

@@ -6,9 +6,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'space': 'linear-gradient(to right, #000000, #0f0c29, #302b63, #24243e, #000000)',
-      },
+
     },
   },
   plugins: [],
