@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 1.4px;
+}
+
+.txt-shadow {
+    text-shadow: 2px 2px 16px rgba(32, 30, 62, 0.919);
+}
