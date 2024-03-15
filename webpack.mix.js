@@ -6,3 +6,4 @@ const mix = require('laravel-mix');
     .postCss('resources/css/app.css', 'public/css', [
         require("tailwindcss"),
  ]);
+ 
