@@ -1,5 +1,5 @@
 <template>
-    <div class="intro h-lvh relative space">
+    <div class="intro h-lvh relative space px-40">
         <div class="flex h-[90%] justify-center items-center">
             <div class=" text-white absolute txt-shadow">
                 <div class=" text-4xl">
@@ -17,13 +17,14 @@
         <!-- 스크롤 버튼 -->
         <div class="flex justify-center"> 
             <button @click="scrollToBottom"><img src="../../public/icon-down.png" class="w-14 pulse over opacity-35" /></button>
-            
-            
         </div>
+
+
     </div>
 </template>
 
 <script>
+import { onMounted, ref } from 'vue';
 
 export default {
   name: 'IntroComponent',
@@ -66,4 +67,7 @@ export default {
 .txt-shadow {
     text-shadow: 2px 2px 16px rgba(53, 53, 53, 0.919);
 }
+
+
+
 </style>
