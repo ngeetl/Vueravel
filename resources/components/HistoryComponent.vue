@@ -18,7 +18,7 @@
 
                 <div class="mx-3 h-10 w-1 bg-gray-300"></div>
 
-                <div class="bg-[#cee2f8] p-4 rounded-lg shadow-md pl-5">
+                <div class="bg-[#ccdaea] py-2 px-5 rounded-md shadow-sm">
                     <div class=" font-normal text-gray-600">{{ event.description }}</div>
                 </div>
 
