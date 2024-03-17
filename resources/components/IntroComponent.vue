@@ -1,7 +1,7 @@
 <template>
-    <div class="intro h-lvh relative space px-40">
-        <div class="flex h-[90%] justify-center items-center">
-            <div class=" text-white absolute txt-shadow">
+    <div class="intro h-lvh relative bg-black px-40">
+        <div class="flex h-[90%] justify-center items-center container mx-auto">
+            <div class=" text-white absolute txt-shadow font-thin">
                 <div class=" text-4xl">
                 Welcome! We're
                 </div>
@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div class="absolute">
-                <dotlottie-player src="https://lottie.host/644d1237-0fb9-4f4b-881c-c6f491c18995/oedx7CtBW3.json" background="transparent" speed=".3" style="opacity: .1; filter: grayscale(100%); width: 550px; height: 550px;" loop autoplay></dotlottie-player>
+                <dotlottie-player src="https://lottie.host/644d1237-0fb9-4f4b-881c-c6f491c18995/oedx7CtBW3.json" background="transparent" speed=".3" style="opacity: .2; filter: grayscale(100%); width: 550px; height: 550px;" loop autoplay></dotlottie-player>
             </div>
         </div>
         <!-- 스크롤 버튼 -->

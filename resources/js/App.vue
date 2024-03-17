@@ -1,8 +1,9 @@
 <template>
     <intro-component></intro-component>
-    <snap-component></snap-component>
-    <culture-component></culture-component>
     <team-component></team-component>
+    <split-component></split-component>
+    <culture-component></culture-component>
+    <snap-component></snap-component>
     <map-component></map-component>
     <history-component></history-component>
     <contact-component></contact-component>
@@ -17,6 +18,7 @@ import HistoryComponent from '../components/HistoryComponent.vue';
 import IntroComponent from '../components/IntroComponent.vue';
 import MapComponent from '../components/MapComponent.vue';
 import SnapComponent from '../components/SnapComponent.vue';
+import SplitComponent from '../components/SplitComponent.vue';
 import TeamComponent from '../components/TeamComponent.vue';
   
   export default {
@@ -28,7 +30,8 @@ import TeamComponent from '../components/TeamComponent.vue';
         MapComponent,
         HistoryComponent,
         FooterComponent,
-        ContactComponent
+        ContactComponent,
+        SplitComponent
     }
   };
   </script>
