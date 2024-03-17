@@ -1,5 +1,5 @@
 <template>
-    <div class="contact container mx-auto pb-10 xl:px-60 min-h-fit flex-col justify-center items-center ">
+    <div class="contact container mx-auto pb-40 xl:px-60 min-h-fit flex-col justify-center items-center ">
         <div class="bg-gray-100 p-10 rounded-xl">
             <div class="text-2xl font-sans font-bold mb-2">
                 CONTACT US
