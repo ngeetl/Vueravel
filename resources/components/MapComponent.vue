@@ -1,6 +1,6 @@
 <template>
     <div class="map container mx-auto py-20 xl:px-60 min-h-fit flex-col justify-center items-center ">
-        <div class="border border-t-gray-300 mb-6"></div>
+        <div class="border-[1px] border-t-gray-300 mb-6"></div>
         <div class="text-lg">
             <div class="mb-5">
                 <div class="text-4xl font-sans font-thin"><span class="font-bold">SANDBURG</span> WORKSPACE</div>
