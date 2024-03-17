@@ -66,6 +66,7 @@ name: 'SnapComponent'
     margin: 20px auto;
     color: white;
     font-weight: 200;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 /* 바운스 애니메이션 */

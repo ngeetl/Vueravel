@@ -4,8 +4,8 @@
     <split-component></split-component>
     <culture-component></culture-component>
     <snap-component></snap-component>
-    <map-component></map-component>
     <history-component></history-component>
+    <map-component></map-component>
     <contact-component></contact-component>
     <footer-component></footer-component>
   </template>
@@ -31,7 +31,7 @@ import TeamComponent from '../components/TeamComponent.vue';
         HistoryComponent,
         FooterComponent,
         ContactComponent,
-        SplitComponent
+        SplitComponent,
     }
   };
   </script>
