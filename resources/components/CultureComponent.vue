@@ -1,15 +1,17 @@
 <template>
     <div class="culture py-20 xl:px-72 h-lvh flex-col justify-center items-center">
         <div class="flex">
-            <div class="flex-1 pr-16 flex-col flex items-center justify-center text-[1.3rem] noto-serif font-normal text-center leading-[3rem]">
-                <div>"</div>
+            <div class="border-black border-t-[20px] border-b-[20px] flex-1 mr-20 flex-col flex items-center justify-center text-lg noto-serif font-normal text-center leading-[2.5rem] ">
+                <!-- <div class="h-[1px] w-1/2 bg-gray-300 mb-3"></div> -->
+
+                <!-- <div>"</div> -->
                 <div class="">
-                    <div class="font-bold text-2xl">The Essence is Time</div>
+                    <div class="font-bold text-2xl mb-5">The Essence is Time</div>
                     시간의 가치를 누구보다 소중하게 생각하며 <br/>
                     효율성 극대화를 통해 시간을 줄일 수 있도록<br/> 
                     돕는 모든 것들을 사랑하고, 만듭니다.
                 </div>
-                <div>"</div>
+                <!-- <div>"</div> -->
             </div>
             <div class="sandburg w-full h-[520px] rounded-3xl relative flex-1">
                 <div class="flex w-100vw">
@@ -38,9 +40,7 @@ name: 'CultureComponent'
     top: 0;
 }
 
-/* .sandburg {
-    background: linear-gradient(to bottom, #000000, #111012 50%, #2d2631 75%, #361545 94%, #5d0e81 100%);
-}  */
+
 .sandburg {
     background: linear-gradient(to bottom, #74562c, #caa97b 50%, #dfb56c 75%, #523400 94%, #2f1e00 100%);
 } 

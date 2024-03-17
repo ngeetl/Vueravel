@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto snap py-20 xl:px-60 min-h-1vh flex-col justify-center items-center bg-gray-100">
+    <div class="container mx-auto snap py-20 xl:px-60 min-h-1vh flex-col justify-center items-center bg-slate-100">
 
         <div class="text-lg font-light">
             <div class="text-4xl font-sans font-thin"><span class="font-bold">SANDBURG</span> SOLUTION</div>

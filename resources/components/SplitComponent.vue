@@ -2,8 +2,8 @@
     <div class="split">
         <div class="h-[17rem] overflow-hidden">
             <div class=" text-white bg h-[17rem] flex flex-col justify-center items-center">
-                <div class=" text-4xl font-sans font-thin"><span class="font-bold">SANDBURG</span> COREVALUE</div>
-                <div class="text-xl font-thin">샌드버그가 지향하는 가치들을 소개합니다</div>
+                <div class=" text-4xl font-sans font-thin"><span class="font-bold">SANDBURG</span> INVESTMENT</div>
+                <div class="text-xl font-thin">블루포인트파트너스 투자 유치 이후 팁스 일반형 선정</div>
             </div>
         </div>
     </div>
