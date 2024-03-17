@@ -1,9 +1,9 @@
 <template> 
     <div class="history py-20 xl:px-72 min-h-screen flex flex-col justify-center">
 
-        <div class="text-base font-thin flex flex-col justify-center items-center border-[1px] border-gray-300 rounded-3xl px-3 py-5 mb-5">
+        <div class="text-base font-base flex flex-col justify-center items-center border-[1px] border-gray-300 rounded-3xl px-3 py-5 mb-5">
             <div class="text-4xl font-sans font-thin"><span class="font-bold">SANDBURG</span> HISTORY</div>
-            <div class="text-center mt-1">
+            <div class="text-center mt-1 text-lg">
                 샌드버그의 시작부터 현재까지, 저희가 걸어온 길을 만나보세요
             </div>
         </div>
@@ -13,13 +13,13 @@
             <div v-for="(event, idx) in item" :key="idx" class="my-4 flex items-center">
 
                 <div class="flex items-center justify-end pr-5">
-                    <span class="w-10 text-lg font-semibold">{{ event.date }}</span>
+                    <span class="w-12 text-lg font-semibold">{{ event.date }}</span>
                 </div>
 
                 <div class="mx-3 h-10 w-1 bg-gray-300"></div>
 
                 <div class="bg-[#cee2f8] p-4 rounded-lg shadow-md pl-5">
-                    <div class="text-sm text-gray-600">{{ event.description }}</div>
+                    <div class=" font-normal text-gray-600">{{ event.description }}</div>
                 </div>
 
             </div>

@@ -1,8 +1,8 @@
 <template>
-    <div class="intro h-lvh relative bg-black px-40">
+    <div class="intro h-lvh relative space px-40">
         <div class="flex h-[90%] justify-center items-center container mx-auto">
-            <div class=" text-white absolute txt-shadow font-thin">
-                <div class=" text-4xl">
+            <div class=" text-white absolute txt-shadow font-light">
+                <div class=" text-3xl">
                 Welcome! We're
                 </div>
                 <div class=" text-8xl font-bold font-sans">SANDBURG</div>
@@ -15,9 +15,10 @@
             </div>
         </div>
         <!-- 스크롤 버튼 -->
-        <div class="flex justify-center"> 
+        <!-- <div class="flex justify-center"> 
+
             <button @click="scrollToBottom"><img src="../../public/icon-down.png" class="w-14 pulse over opacity-35" /></button>
-        </div>
+        </div> -->
 
 
     </div>
@@ -44,6 +45,11 @@ export default {
 
 
 <style scoped>
+/* background */
+.space {
+    background: linear-gradient(180deg, rgba(16,0,41,1) 0%, rgba(23,50,122,1) 35%, rgb(100, 100, 185) 48%, rgb(33, 20, 100) 73%, rgb(5, 0, 18) 100%);
+}
+ 
 @keyframes pulse {
   0% {
     transform: scale(1); 
@@ -65,7 +71,7 @@ export default {
 }
 
 .txt-shadow {
-    text-shadow: 2px 2px 16px rgba(53, 53, 53, 0.919);
+    text-shadow: 2px 2px 16px rgba(23, 23, 23, 0.679);
 }
 
 

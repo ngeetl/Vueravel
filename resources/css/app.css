@@ -15,9 +15,3 @@ body {
     font-style: normal;
   }
   
-/* .space {
-    background: linear-gradient(160deg, #000000, #222123 50%, #321f45 75%, #370d5e 100%);
-}  */
-.space {
-    background: linear-gradient(152deg, rgba(16,0,41,1) 0%, rgba(23,50,122,1) 35%, rgba(147,100,185,1) 54%, rgba(63,38,138,1) 73%, rgb(60, 10, 91) 100%);
-} 

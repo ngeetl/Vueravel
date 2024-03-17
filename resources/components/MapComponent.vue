@@ -1,11 +1,11 @@
 <template>
-    <div class="map container mx-auto py-20 xl:px-60 min-h-fit flex-col justify-center items-center ">
+    <div class="map container mx-auto pb-10 xl:px-60 min-h-fit flex-col justify-center items-center ">
         <div class="border-[1px] border-t-gray-300 mb-6"></div>
         <div class="text-lg">
             <div class="mb-5">
                 <div class="text-4xl font-sans font-thin"><span class="font-bold">SANDBURG</span> WORKSPACE</div>
                 <div>
-                    부산 최고의 근무지 Wework BIFC에서 근무합니다
+                    샌드버그의 새로운 시작, 새로운 워크스페이스
                 </div>
             </div>
             <!-- KAKAOMAP -->
@@ -49,7 +49,7 @@ export default {
             var geocoder = new kakao.maps.services.Geocoder();
 
             // 주소로 좌표를 검색합니다
-            geocoder.addressSearch('부산광역시 남구 문현금융로 40', function(result, status) {
+            geocoder.addressSearch('부산광역시 부산진구 중앙대로 615', function(result, status) {
 
                 // 정상적으로 검색이 완료됐으면 
                 if (status === kakao.maps.services.Status.OK) {
@@ -66,8 +66,8 @@ export default {
                     var infowindow = new kakao.maps.InfoWindow({
                         content: `
                         <div class="top-3 text-xs w-60 p-4 font-bold">
-                            <div class="text-sm mb-1">Wework BIFC</div>
-                            <div>부산광역시 남구 전포대로 133, 14층 116호 샌드버그</div>
+                            <div class="text-sm mb-1">SANDBURG</div>
+                            <div>부산 부산진구 중앙대로 615 20층 평광빌딩</div>
                         </div>
                          `
                     });

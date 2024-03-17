@@ -1,7 +1,7 @@
 <template>
     <div class="container mx-auto snap py-20 xl:px-60 min-h-1vh flex-col justify-center items-center bg-slate-100">
 
-        <div class="text-lg font-light">
+        <div class="text-lg font-base">
             <div class="text-4xl font-sans font-thin"><span class="font-bold">SANDBURG</span> SOLUTION</div>
             <div>
                 온라인 사장님들의 커머스 운영 난이도를 완화하기 위한 스냅 솔루션을 출시
@@ -66,7 +66,7 @@ name: 'SnapComponent'
     padding: 18px 20px;
     margin: 20px auto;
     color: white;
-    font-weight: 400;
+    font-weight: 300;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
