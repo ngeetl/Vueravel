@@ -1,12 +1,15 @@
 <template>
     <div class="team container mx-auto py-28 xl:px-72 min-h-fit flex-col justify-center items-center bg-slate-50">
         <div class="tag-cloud flex justify-end relative font-light">
+            <div class="tag w-[25rem] h-[25rem] top-0 right-2 bg-slate-200 text-3xl"><div></div></div>
+            <div class="tag w-[22rem] h-[22rem] top-3 right-6 bg-slate-300 text-3xl"><div></div></div>
+
             <div class="tag w-60 h-60 top-10 right-20 bg-slate-900 text-3xl"><div>DATA</div></div>
-            <div class="tag w-36 h-36 -top-6 -right-9 bg-slate-400"><div>시간</div></div>
+            <div class="tag w-36 h-36 -top-3 -right-10 bg-slate-400"><div>시간</div></div>
             <div class="tag w-24 h-24 top-8 right-[19.2rem] bg-slate-400"><div>언더독</div></div>
             <div class="tag w-36 h-36 top-[10.3rem] right-[19.5rem] bg-slate-500 text-lg"><div>부적응자</div></div>
-            <div class="tag w-24 h-24 top-[17rem] right-[14rem] bg-slate-700"><div>변화</div></div>
-            <div class="tag w-28 h-28 top-32 -right-10 bg-slate-400"><div>BM</div></div>
+            <div class="tag w-[6.4rem] h-[6.4rem] top-[17rem] right-[14rem] bg-slate-700"><div>변화</div></div>
+            <div class="tag w-28 h-28 top-[8.3rem] -right-10 bg-slate-400"><div>BM</div></div>
             <div class="tag w-24 h-24 top-60 right-8 bg-slate-300 text-sm"><div>물음표</div></div>
         </div>
         <div class=""> 
@@ -57,7 +60,7 @@ export default {
     align-items: center;
     position: absolute;
     border-radius: 50%;
-    opacity: .6;
+    opacity: .5;
     color: aliceblue;
     transition-duration: 1.2s;    
 }
