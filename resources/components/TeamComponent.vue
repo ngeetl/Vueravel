@@ -15,9 +15,10 @@
 
         <div ref="event2" class=" opacity-0"> 
             <div class="mb-7">
+                <div class="w-1/2 mb-1 text-end text-gray-400 font-thin text-xl">샌드버그를 소개합니다</div>
                 <div class="h-[1px] w-1/2 bg-gray-300 mb-3"></div>
                 <div class="font-sans text-2xl mb-2">WE PROVE OURSELVES WITH DATA</div>
-                    <div class=" font-normal">
+                    <div class="text-[1.05rem] font-normal">
                         우리가 뛰어나다는 것을 증명하는 많은 수단이 있지만,<br/>
                         우리는 데이터로 그것을 증명하고<br/>
                         데이터로 세상을 효율적으로 만들어갑니다.
@@ -25,14 +26,14 @@
             </div>
             <div class="mb-7">
                 <div class="font-sans text-2xl mb-2">WE ARE UNDERDOG</div>
-                <div class=" font-normal">
+                <div class="text-[1.05rem] font-normal">
                     언더독 마인드셋을 기반으로,<br/>
                     실패를 두려워않는 사람들을 사랑합니다.
                 </div>
             </div>
             <div class="mb-5">
                 <div class="font-sans text-2xl mb-2">WE ARE MISFITS</div>
-                <div class=" font-normal">
+                <div class="text-[1.05rem] font-normal">
                     불편함 속에 물음을 던지고,<br/>
                     본질을 파헤치는 과정을 즐기고 사랑하며,<br/>
                     변화를 만들어내는 조직입니다

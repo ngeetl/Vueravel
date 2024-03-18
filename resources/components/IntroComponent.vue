@@ -2,11 +2,11 @@
     <div class="intro h-lvh relative space px-40">
         <div class="flex h-[90%] justify-center items-center container mx-auto">
             <div ref="event1" class=" opacity-0 text-white absolute txt-shadow font-light">
-                <div class=" text-3xl">
+                <div class=" text-[1.9rem]">
                   Welcome! We're
                 </div>
                 <div  class=" text-8xl font-bold font-sans">SANDBURG</div>
-                <div class=" text-2xl mt-1">
+                <div class=" text-[1.46rem]">
                     국내 유일, 커머스와 핀테크를 잇는 데이터 전문기업 <br/>
                 </div>
             </div>
