@@ -1,6 +1,6 @@
 <template>
     <div class="team container mx-auto py-28 xl:px-72 min-h-fit flex-col justify-center items-center bg-slate-50">
-        <div class="tag-cloud flex justify-end relative font-light">
+        <div ref="event1" class=" opacity-0 tag-cloud flex justify-end relative font-light">
             <div class="tag w-[25rem] h-[25rem] top-0 right-2 bg-slate-200 text-3xl"><div></div></div>
             <div class="tag w-[22rem] h-[22rem] top-3 right-6 bg-slate-300 text-3xl"><div></div></div>
 
@@ -12,7 +12,8 @@
             <div class="tag w-28 h-28 top-[8.3rem] -right-10 bg-slate-400"><div>BM</div></div>
             <div class="tag w-24 h-24 top-60 right-8 bg-slate-300 text-sm"><div>물음표</div></div>
         </div>
-        <div class=""> 
+
+        <div ref="event2" class=" opacity-0"> 
             <div class="mb-7">
                 <div class="h-[1px] w-1/2 bg-gray-300 mb-3"></div>
                 <div class="font-sans text-2xl mb-2">WE PROVE OURSELVES WITH DATA</div>
@@ -42,18 +43,50 @@
 </template>
 
 <script>
+import { onMounted, ref, onUnmounted } from 'vue';
+
 export default {
     name: 'TeamComponent',
 
     setup () {
-      
-    }
+        // observer
+        const event1 = ref(null);
+        const event2 = ref(null);
+
+        const enventHandler = () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                event1.value.classList.add('event1');
+                event2.value.classList.add('event2');
+                observer.unobserve(entry.target); // 더 이상 관찰하지 않음
+                }
+            });
+            });
+
+            if (event1.value) {
+            observer.observe(event1.value);
+            }
+        }
+
+        onMounted(() => {
+        enventHandler()
+        });
+
+        onUnmounted(() => {
+        if (observer) {
+            observer.disconnect();
+        }
+        });
+        
+        return { event1, event2 }
+    } 
 }
 </script>
 
 
 <style scoped>
-
+/* tag */
 .tag {
     display: flex;
     justify-content: center;
@@ -64,11 +97,40 @@ export default {
     color: aliceblue;
     transition-duration: 1.2s;    
 }
-
 .tag:hover {
     opacity: .9;
     
 }
+
+/* event */
+.event1 {
+  animation: event1 2.1s forwards; 
+}
+.event2 {
+  animation: event2 2.1s forwards; 
+}
+
+@keyframes event1 {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes event2 {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 
 </style>
