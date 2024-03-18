@@ -1,33 +1,37 @@
 <template> 
     <div class="history py-20 xl:px-72 min-h-screen flex flex-col justify-center">
 
-        <div class="text-base font-base flex flex-col justify-center items-center border-[1px] border-gray-300 rounded-3xl px-3 py-5 mb-5">
+        <div ref="event1" class="opacity-0 text-base font-base flex flex-col justify-center items-center border-[1px] border-gray-300 rounded-3xl px-3 py-5 mb-5">
             <div class="text-4xl font-sans font-thin"><span class="font-bold">SANDBURG</span> HISTORY</div>
             <div class="text-center mt-1 text-lg">
                 샌드버그의 시작부터 현재까지, 저희가 걸어온 길을 만나보세요
             </div>
         </div>
 
-        <div class="py-6" v-for="(item, year) in companyHistory" :key="year">
-            <h1 class="text-2xl font-bold">{{ year }}</h1>
-            <div v-for="(event, idx) in item" :key="idx" class="my-4 flex items-center">
-
-                <div class="flex items-center justify-end pr-5">
-                    <span class="w-12 text-lg font-semibold">{{ event.date }}</span>
+        <div ref="event2" class=" -translate-x-20">
+            <div class="py-6" v-for="(item, year) in companyHistory" :key="year">
+                <h1 class="text-2xl font-bold">{{ year }}</h1>
+                <div v-for="(event, idx) in item" :key="idx" class="my-4 flex items-center">
+    
+                    <div class="flex items-center justify-end pr-5">
+                        <span class="w-12 text-lg font-semibold">{{ event.date }}</span>
+                    </div>
+    
+                    <div class="mx-3 h-10 w-1 bg-gray-300"></div>
+    
+                    <div class="bg-[#ccdaea] py-2 px-5 rounded-md shadow-sm">
+                        <div class=" font-normal text-gray-600">{{ event.description }}</div>
+                    </div>
+    
                 </div>
-
-                <div class="mx-3 h-10 w-1 bg-gray-300"></div>
-
-                <div class="bg-[#ccdaea] py-2 px-5 rounded-md shadow-sm">
-                    <div class=" font-normal text-gray-600">{{ event.description }}</div>
-                </div>
-
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import { onMounted, ref, onUnmounted } from 'vue';
+
 export default {
     name: 'HistoryComponent',
 
@@ -60,13 +64,65 @@ export default {
             ],
         };
 
+        // observer
+        const event1 = ref(null);
+        const event2 = ref(null);
 
-        return { companyHistory }
+        const enventHandler = () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                event1.value.classList.add('event1');
+                event2.value.classList.add('event2');
+                observer.unobserve(entry.target); // 더 이상 관찰하지 않음
+                }
+            });
+            });
+
+            if (event1.value) {
+            observer.observe(event1.value);
+            }
+        }
+
+        onMounted(() => {
+        enventHandler()
+        });
+
+        onUnmounted(() => {
+        if (observer) {
+            observer.disconnect();
+        }
+        });
+        
+        return { companyHistory, event1, event2  }
     }
 }
 </script>
 
 
 <style scoped>
+/* event */
+.event1 {
+  animation: event1 2.1s .4s forwards; 
+}
+.event2 {
+  animation: event2 2.1s 1s forwards; 
+}
 
+@keyframes event1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes event2 {
+  from {
+    transform: translateX(-80px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 </style>

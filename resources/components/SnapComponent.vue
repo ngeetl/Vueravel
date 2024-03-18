@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto snap py-20 xl:px-60 min-h-1vh flex-col justify-center items-center bg-slate-100">
+    <div ref="event1" class="opacity-0 container mx-auto snap py-20 xl:px-60 min-h-1vh flex-col justify-center items-center bg-slate-100">
 
         <div class="text-lg font-base">
             <div class="text-4xl font-sans font-thin"><span class="font-bold">SANDBURG</span> SOLUTION</div>
@@ -52,8 +52,41 @@
 </template>
 
 <script>
+import { onMounted, ref, onUnmounted } from 'vue';
+
 export default {
-name: 'SnapComponent'
+    name: 'SnapComponent',
+    setup() {
+        // observer
+        const event1 = ref(null);
+
+        const enventHandler = () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                event1.value.classList.add('event1');
+                observer.unobserve(entry.target); // 더 이상 관찰하지 않음
+                }
+            });
+            });
+
+            if (event1.value) {
+            observer.observe(event1.value);
+            }
+        }
+
+        onMounted(() => {
+        enventHandler()
+        });
+
+        onUnmounted(() => {
+        if (observer) {
+            observer.disconnect();
+        }
+        });
+
+        return { event1 }
+    }
 }
 </script>
 
@@ -92,6 +125,21 @@ name: 'SnapComponent'
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
 }
+
+/* event */
+.event1 {
+  animation: event1 2.1s .2s forwards; 
+}
+
+@keyframes event1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 
 
 </style>

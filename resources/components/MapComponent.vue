@@ -1,5 +1,5 @@
 <template>
-    <div class="map container mx-auto pb-10 xl:px-60 min-h-fit flex-col justify-center items-center ">
+    <div ref="event1" class="opacity-0 map container mx-auto pb-10 xl:px-60 min-h-fit flex-col justify-center items-center ">
         <div class="border-[1px] border-t-gray-300 mb-6"></div>
         <div class="text-lg">
             <div class="mb-5">
@@ -17,13 +17,14 @@
 </template>
 
 <script>
-import { onMounted, ref } from 'vue';
+import { onMounted, ref, onUnmounted } from 'vue';
 
 export default {
     name: 'MapComponent',
 
     setup() {
-        // 카카오 맵 API가 로드될 때까지 기다렸다가 맵을 초기화하는 함수
+
+        // 카카오 맵 API
         const initializeMap = () => {
             var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
                 mapOption = {
@@ -77,8 +78,7 @@ export default {
                     map.setCenter(coords);
                 } 
             }); 
-          
-        };
+        }
 
         onMounted(() => {
             if (window.kakao && window.kakao.maps) {
@@ -91,6 +91,36 @@ export default {
                 document.head.appendChild(mapScript);
             }
         });
+        
+        // observer
+        const event1 = ref(null);
+
+        const enventHandler = () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                event1.value.classList.add('event1');
+                observer.unobserve(entry.target); // 더 이상 관찰하지 않음
+                }
+            });
+            });
+
+            if (event1.value) {
+            observer.observe(event1.value);
+            }
+        }
+
+        onMounted(() => {
+        enventHandler()
+        });
+
+        onUnmounted(() => {
+        if (observer) {
+            observer.disconnect();
+        }
+        });
+        
+        return { event1 }
     }
 }
 
@@ -100,5 +130,18 @@ export default {
 
 
 <style scoped>
+/* event */
+.event1 {
+  animation: event1 2.1s .5s forwards; 
+}
+
+@keyframes event1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 </style>
