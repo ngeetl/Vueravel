@@ -54,7 +54,7 @@ export default {
     });
 
     return { event1, event2 }
-  },
+  }
 
 };
 </script>
