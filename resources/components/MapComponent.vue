@@ -132,7 +132,7 @@ export default {
 <style scoped>
 /* event */
 .event1 {
-  animation: event1 2.1s .5s forwards; 
+  animation: event1 1.5s .1s forwards; 
 }
 
 @keyframes event1 {

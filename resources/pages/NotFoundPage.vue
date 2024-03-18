@@ -28,14 +28,14 @@
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #ffffff;
-  color: #a6c1e6;
+  color: #2d2d2d;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .home-link:hover {
-  background-color: #99ace3;
+  background-color: #020202;
   color: #ffffff;
 }
 </style>
