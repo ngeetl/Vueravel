@@ -1,7 +1,8 @@
 <template>
     <div class="culture py-20 xl:px-72 h-lvh flex-col justify-center items-center">
         <div class="flex">
-            <div class="border-black border-t-[20px] border-b-[20px] flex-1 mr-20 flex-col flex items-center justify-center text-lg noto-serif font-normal text-center leading-[2.5rem] ">
+
+            <div ref="event1" class="opacity-0 border-black border-t-[20px] border-b-[20px] flex-1 mr-20 flex-col flex items-center justify-center text-lg noto-serif font-normal text-center leading-[2.5rem] ">
                 <div class="">
                     <div class="font-bold text-2xl mb-5">The Essence is Time</div>
                     시간의 가치를 누구보다 소중하게 생각하며 <br/>
@@ -9,19 +10,57 @@
                     돕는 모든 것들을 사랑하고, 만듭니다.
                 </div>
             </div>
-            <div class="sandburg w-full h-[520px] rounded-3xl relative flex-1">
+
+            <div ref="event2" class="opacity-0 sandburg w-full h-[520px] rounded-3xl relative flex-1">
                 <div class="flex w-100vw">
                     <div v-for="(item, idx) of 500" :key="idx" :style="{ left: Math.random() * 100 + '%', animationDuration: Math.random() * 3 + 3.5 + 's' }" class="sand"></div>
                 </div>
             </div>
+
         </div>
     </div>
 </template>
 
 <script>
+import { onMounted, ref, onUnmounted } from 'vue';
+
 export default {
-name: 'CultureComponent'
+    name: 'CultureComponent',
+    setup() {
+    // observer
+    const event1 = ref(null);
+    const event2 = ref(null);
+
+    const enventHandler = () => {
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              event1.value.classList.add('event1');
+              event2.value.classList.add('event2');
+              observer.unobserve(entry.target); // 더 이상 관찰하지 않음
+            }
+          });
+        });
+  
+        if (event1.value) {
+          observer.observe(event1.value);
+        }
+    }
+
+    onMounted(() => {
+      enventHandler()
+    });
+
+    onUnmounted(() => {
+      if (observer) {
+        observer.disconnect();
+      }
+    });
+
+    return { event1, event2 }
+  }
 }
+
 </script>
 
 <style scoped>
@@ -48,4 +87,34 @@ name: 'CultureComponent'
     100% { top: 100%; opacity: 0.1; }
 
 }
+
+/* event */
+.event1 {
+  animation: event1 2.1s forwards; 
+}
+.event2 {
+  animation: event2 2.1s forwards; 
+}
+
+@keyframes event1 {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes event2 {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 </style>
