@@ -15,7 +15,7 @@
 
         <div ref="event2" class=" opacity-0"> 
             <div class="mb-7">
-                <div class="w-1/2 mb-1 text-end text-gray-400 font-thin text-xl">샌드버그를 소개합니다</div>
+                <div class="w-1/2 mb-1 text-end text-gray-400 font-normal text-xl">샌드버그를 소개합니다</div>
                 <div class="h-[1px] w-1/2 bg-gray-300 mb-3"></div>
                 <div class="font-sans text-2xl mb-2">WE PROVE OURSELVES WITH DATA</div>
                     <div class="text-[1.05rem] font-normal">
