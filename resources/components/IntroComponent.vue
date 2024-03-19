@@ -10,7 +10,7 @@
                     국내 유일, 커머스와 핀테크를 잇는 데이터 전문기업 <br/>
                 </div>
             </div>
-            <div ref="event2" class="absolute opcity-0">
+            <div ref="event2" class="absolute opacity-0">
                 <dotlottie-player src="https://lottie.host/644d1237-0fb9-4f4b-881c-c6f491c18995/oedx7CtBW3.json" background="transparent" speed=".3" style="opacity: .2; filter: grayscale(100%); width: 550px; height: 550px;" loop autoplay></dotlottie-player>
             </div>
         </div>
