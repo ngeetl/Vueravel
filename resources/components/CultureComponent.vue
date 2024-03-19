@@ -67,7 +67,7 @@ export default {
 /* 모래시계 */
 .sand {
     position: absolute;
-    width: 3px;
+    width: 2px;
     height: 6px;
     background-color: #452300e9;
     border-radius: 50%;

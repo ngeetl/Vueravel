@@ -63,7 +63,7 @@ export default {
 <style scoped>
 /* background */
 .space {
-    background: linear-gradient(180deg, rgba(16,0,41,1) 0%, rgba(23,50,122,1) 35%, rgb(88, 103, 189) 48%, rgb(20, 24, 100) 73%, rgb(5, 0, 18) 100%);
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(15, 13, 13) 35%, rgb(49, 49, 49) 48%, rgb(26, 26, 26) 73%, rgb(0, 0, 0) 100%);
 }
  
 /* text shadow */

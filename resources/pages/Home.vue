@@ -9,15 +9,18 @@
   <map-component></map-component>
   <contact-component></contact-component>
   <footer-component></footer-component>
+  <recruit-icon-component></recruit-icon-component>
 </template>
 
 <script>
 import { defineAsyncComponent } from 'vue';
+import RecruitIconComponent from '../components/RecruitIconComponent.vue';
+import IntroComponent from '../components/IntroComponent.vue';
   
  export default {
   name: 'HomeComponent',
   components: {
-    IntroComponent: defineAsyncComponent(() => import('../components/IntroComponent.vue')),
+    IntroComponent,
     SnapComponent: defineAsyncComponent(() => import('../components/SnapComponent.vue')),
     CultureComponent: defineAsyncComponent(() => import('../components/CultureComponent.vue')),
     TeamComponent: defineAsyncComponent(() => import('../components/TeamComponent.vue')),
@@ -27,6 +30,7 @@ import { defineAsyncComponent } from 'vue';
     ContactComponent: defineAsyncComponent(() => import('../components/ContactComponent.vue')),
     SplitComponent: defineAsyncComponent(() => import('../components/SplitComponent.vue')),
     IndicatorComponent: defineAsyncComponent(() => import('../components/IndicatorComponent.vue')),
+    RecruitIconComponent,
   }
 };
 </script>
