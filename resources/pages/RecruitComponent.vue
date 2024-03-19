@@ -106,12 +106,13 @@
 
 <script>
 import FooterComponent from '../components/FooterComponent.vue';
+import IndicatorComponent from '../components/IndicatorComponent.vue';
 import RecruitBoxComponent from '../components/RecruitBoxComponent.vue';
 
   
  export default {
   name: 'RecruitComponent',
-  components: { RecruitBoxComponent, FooterComponent }
+  components: { RecruitBoxComponent, FooterComponent, IndicatorComponent }
 };
 </script>
 

@@ -13,7 +13,7 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey={{ config('app.kakao') }}&libraries=services"></script>
 </head>
 <body>
-<div class="bg-slate-50">  
+<div class="">  
     <div id="app">
     @yield('content')
     </div>
