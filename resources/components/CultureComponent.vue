@@ -13,7 +13,7 @@
 
             <div ref="event2" class="opacity-0 sandburg w-full h-[520px] rounded-3xl relative flex-1">
                 <div class="flex w-100vw">
-                    <div v-for="(item, idx) of 500" :key="idx" :style="{ left: Math.random() * 100 + '%', animationDuration: Math.random() * 3 + 3.5 + 's' }" class="sand"></div>
+                    <div v-for="(item, idx) of 300" :key="idx" :style="{ left: Math.random() * 100 + '%', animationDuration: Math.random() * 3 + 3.5 + 's' }" class="sand"></div>
                 </div>
             </div>
 
@@ -67,12 +67,13 @@ export default {
 /* 모래시계 */
 .sand {
     position: absolute;
-    width: 2px;
-    height: 2px;
+    width: 3px;
+    height: 6px;
     background-color: #452300e9;
     border-radius: 50%;
     animation: fall ease-out infinite;
     top: 0;
+    will-change: top, opacity, left;
 }
 
 
