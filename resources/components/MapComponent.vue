@@ -87,7 +87,7 @@ export default {
                 // 카카오 맵 스크립트가 로드될 때까지 기다리는 이벤트 리스너
                 const mapScript = document.createElement('script');
                 mapScript.onload = () => initializeMap();
-                mapScript.src = '//dapi.kakao.com/v2/maps/sdk.js?appkey=e60513e31042d98c0889764ff58ba286'; // YOUR_APP_KEY에 실제 앱 키를 넣어야 합니다.
+                mapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${process.env.KAKAOMAP_API_KEY}&libraries=services`; // YOUR_APP_KEY에 실제 앱 키를 넣어야 합니다.
                 document.head.appendChild(mapScript);
             }
         });
