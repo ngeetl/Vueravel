@@ -1,5 +1,5 @@
 <template>
-    <div class="culture py-20 xl:px-72 h-lvh flex-col justify-center items-center">
+    <div class="culture container py-20 xl:px-72 h-lvh flex-col justify-center items-center">
         <div class="flex">
 
             <div ref="event1" class="opacity-0 border-black border-t-[20px] border-b-[20px] flex-1 mr-20 flex-col flex items-center justify-center text-lg noto-serif font-normal text-center leading-[2.5rem] ">
