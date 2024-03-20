@@ -1,8 +1,8 @@
 <template>
-    <div class="culture container py-20 xl:px-72 h-lvh flex-col justify-center items-center">
-        <div class="flex">
+    <div class="culture container py-20 xl:px-72 min-h-fit flex-col justify-center items-cente mx-auto">
+        <div class="grid grid-cols-2 gap-10">
 
-            <div ref="event1" class="opacity-0 border-black border-t-[20px] border-b-[20px] flex-1 mr-20 flex-col flex items-center justify-center text-lg noto-serif font-normal text-center leading-[2.5rem] ">
+            <div ref="event1" class="opacity-0 border-black border-t-[20px] border-b-[20px] flex-col flex items-center justify-center text-lg noto-serif font-normal text-center leading-[2.5rem] ">
                 <div class="">
                     <div class="font-bold text-2xl mb-5">The Essence is Time</div>
                     시간의 가치를 누구보다 소중하게 생각하며 <br/>
@@ -11,8 +11,8 @@
                 </div>
             </div>
 
-            <div ref="event2" class="opacity-0 sandburg w-full h-[520px] rounded-3xl relative flex-1">
-                <div class="flex w-100vw">
+            <div ref="event2" class="opacity-0 sandburg w-full h-[520px] rounded-3xl relative">
+                <div class="flex w-1vw">
                     <div v-for="(item, idx) of 300" :key="idx" :style="{ left: Math.random() * 100 + '%', animationDuration: Math.random() * 3 + 3.5 + 's' }" class="sand"></div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 <template>
-    <div ref="event1" class="opacity-0 container mx-auto snap py-20 xl:px-60 min-h-1vh flex-col justify-center items-center bg-stone-50">
+    <div ref="event1" class="opacity-0 container mx-auto snap py-20 xl:px-60 min-h-1vh flex-col justify-center items-center border-t-[1px]">
 
         <div class="text-lg font-base">
             <div class="text-4xl font-sans font-thin"><span class="font-bold">SANDBURG</span> SOLUTION</div>

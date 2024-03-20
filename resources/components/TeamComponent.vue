@@ -1,6 +1,6 @@
 <template>
-    <div class="team container mx-auto py-28 xl:px-72 min-h-fit flex-col justify-center items-center bg-slate-50">
-        <div ref="event1" class="opacity-0 tag-cloud flex justify-end relative font-light">
+    <div class="team container mx-auto py-28 xl:px-72 min-h-fit flex-col justify-center items-center">
+        <div ref="event1" class="opacity-0 tag-cloud flex justify-end relative font-light mr-10">
             <div class="tag w-[25rem] h-[25rem] top-0 right-2 bg-slate-200 text-3xl"><div></div></div>
             <div class="tag w-[22rem] h-[22rem] top-3 right-6 bg-slate-300 text-3xl"><div></div></div>
 
